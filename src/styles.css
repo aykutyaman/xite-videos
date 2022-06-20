@@ -1,0 +1,136 @@
+/* set font family and background gradient */
+body {
+  padding: 0;
+  border: 0;
+  font-family: Arial, sans-serif;
+  background-color: #201d22;
+  max-width: 790px;
+  margin: 0.5rem;
+}
+
+/* set the layout to border box model */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* grid */
+@media (min-width: 550px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2%;
+    /*margin-bottom: 1rem;*/
+  }
+  .span1,
+  .span2 {
+    flex-basis: 48%;
+  }
+  .span3 {
+    flex-basis: 100%;
+  }
+  .span3-1 {
+    flex-basis: 100%;
+  }
+  .span4 {
+    flex-basis: 100%;
+  }
+  .span2-4 {
+    flex-basis: 100%;
+  }
+  body {
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .span1 {
+    flex-basis: 22%;
+  }
+  .span2 {
+    flex-basis: 48%;
+  }
+  .span3 {
+    flex-basis: 74%;
+  }
+  .span4 {
+    flex-basis: 100%;
+  }
+  body {
+    margin: 0.5rem auto 0.5rem;
+  }
+}
+
+/* others */
+.searchInput {
+  width: 100%;
+  padding: 7px;
+  height: 40px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b6afaf;
+  opacity: 1; /* Firefox */
+  padding: 0px;
+  font-size: 0.8rem;
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #b6afaf;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #b6afaf;
+}
+
+.row > div,
+.row > figure {
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  /* position figure caption */
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+}
+figcaption {
+  background-color: #001219;
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+figcaption * {
+  margin: 0.1rem;
+}
+
+/* Responsive image hack. Use something like
+different sizes with img.srcset */
+figure img {
+  width: 100%;
+}
+
+figure h2 {
+  font-size: 0.8rem;
+}
+
+figure p {
+  font-size: 0.6rem;
+}
